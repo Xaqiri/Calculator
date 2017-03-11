@@ -1,0 +1,48 @@
+body {
+  background: #263238;
+  color: #eceff1;
+  font-size: 3em;
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+footer {
+  margin-top: 60%;
+  text-align: center;
+  font-size: 1rem; }
+
+a {
+  text-decoration: none;
+  color: #90a4ae; }
+
+a:hover {
+  color: #b0bec5; }
+
+#display {
+  text-align: right;
+  background: #455a64;
+  padding: 1%;
+  margin: 1%;
+  cursor: default; }
+
+.container {
+  margin: 10% auto;
+  max-width: 600px; }
+
+.square {
+  background: #607d8b;
+  width: 23%;
+  margin: 1%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  float: left;
+  text-align: center; }
+
+.square:hover {
+  cursor: pointer;
+  background: #90a4ae; }
+
+/*# sourceMappingURL=main.css.map */
