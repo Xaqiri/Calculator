@@ -10,16 +10,14 @@ body {
   user-select: none; }
 
 footer {
-  margin-top: 60%;
   text-align: center;
   font-size: 1rem; }
 
 a {
   text-decoration: none;
   color: #90a4ae; }
-
-a:hover {
-  color: #b0bec5; }
+  a:hover {
+    color: #b0bec5; }
 
 #display {
   text-align: right;
@@ -30,7 +28,8 @@ a:hover {
 
 .container {
   margin: 10% auto;
-  max-width: 600px; }
+  max-width: 600px;
+  border: 1px solid white; }
 
 .square {
   background: #607d8b;
@@ -40,9 +39,8 @@ a:hover {
   padding-bottom: 6%;
   float: left;
   text-align: center; }
-
-.square:hover {
-  cursor: pointer;
-  background: #90a4ae; }
+  .square:hover {
+    cursor: pointer;
+    background: #90a4ae; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,8 +1,13 @@
-body {
-	background: #263238;
-	color: #eceff1;
-	font-size: 3em;
-	margin: 0;
+// Colors from
+// https://material.io/guidelines/style/color.html
+$bg-50: 	#eceff1;
+$bg-200: 	#b0bec5;
+$bg-300: 	#90a4ae;
+$bg-500:	#607d8b;
+$bg-700: 	#455a64;
+$bg-900: 	#263238;
+
+@mixin user-select() {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -10,24 +15,31 @@ body {
 	user-select: none;
 }
 
+body {
+	background: $bg-900;
+	color: $bg-50;
+	font-size: 3em;
+	margin: 0;
+	@include user-select();
+}
+
 footer {
-	margin-top: 60%;
+	// margin-top: 60%;
 	text-align: center;
 	font-size: 1rem;
 }
 
 a {
 	text-decoration: none;
-	color: #90a4ae;
-}
-
-a:hover {
-	color: #b0bec5;
+	color: $bg-300;
+	&:hover {
+		color: $bg-200;
+	}
 }
 
 #display {
 	text-align: right;
-	background: #455a64;
+	background: $bg-700;
 	padding: 1%;
 	margin: 1%;
 	cursor: default;
@@ -36,19 +48,19 @@ a:hover {
 .container {
 	margin: 10% auto;
 	max-width: 600px;
+	border: 1px solid white;
 }
 
 .square {
-	background: #607d8b;
+	background: $bg-500;
 	width: 23%;
 	margin: 1%;
 	padding-top: 6%;
 	padding-bottom: 6%;
 	float: left;
 	text-align: center;
-}
-
-.square:hover {
-	cursor: pointer;
-	background: #90a4ae;
+	&:hover {
+		cursor: pointer;
+		background: $bg-300;
+	}
 }
