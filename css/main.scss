@@ -39,12 +39,20 @@ a {
 	}
 }
 
+#history {
+	text-align: right;
+	font-size: .5rem;
+	background: lighten($bg-900, 10%);
+	padding: 1%;
+	margin: 2% 1% 0 1%;
+	cursor: default;
+}
+
 #display {
 	text-align: right;
-	// background: $bg-700;
 	background: lighten($bg-900, 15%);
 	padding: 1%;
-	margin: 1%;
+	margin: 0 1% 1% 1%;
 	cursor: default;
 }
 
@@ -69,7 +77,6 @@ a {
 	box-shadow: 2px 2px $bg-700;
 	&:hover {
 		cursor: pointer;
-		// background: $bg-300;
 		background: lighten($bg-500, 15%);
 	}
 }

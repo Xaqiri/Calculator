@@ -1,3 +1,4 @@
+let history = document.querySelector('#history')
 let display = document.querySelector('#display')
 let clear = document.querySelector('#clear')
 let clearEntry = document.querySelector('#clearEntry')
@@ -22,9 +23,11 @@ const operatorKeys = Object.keys(operators)
 
 const operation = (operator) => {
 	if (entry.length > 0) {
+		if (entry[entry.length-1] === '.') entry.push('0')
 		sum.push(entry.join(''))
 		sum.push(operator)
 		display.textContent = entry.join('')
+		history.textContent = sum.join('')
 		entry = []
 	}
 }
@@ -52,6 +55,7 @@ clear.addEventListener('click', function () {
 	entry = []
 	sum = []
 	display.textContent = 0
+	history.textContent = 0
 })
 
 clearEntry.addEventListener('click', function () {
@@ -89,6 +93,8 @@ equals.addEventListener('click', function () {
 		sum.push(entry.join(''))
 		var total = eval(sum.join(''))
 		display.textContent = total
+		sum.push('=', total)
+		history.textContent = sum.join('')
 		sum = []
 		entry = String(total).split('')
 	}
