@@ -41,7 +41,8 @@ a {
   padding-top: 6%;
   padding-bottom: 6%;
   float: left;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 2px 2px #455a64; }
   .square:hover {
     cursor: pointer;
     background: #8aa2ae; }

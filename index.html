@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Calculator</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- <script
 		src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -23,27 +24,30 @@
 			<!-- Limit display to 16 characters -->
 			<div id="display">0</div>
 			<!-- Give the C square a width of 73% if alone -->
-			<div class="square">CE</div>
-			<div class="square">C</div>
+			<div class="square" id="clearEntry">CE</div>
+			<div class="square" id="clear">C</div>
 			<!-- <div class="square">&#9003;</div> -->
-			<div class="square">X</div>
-			<div class="square">/</div>
-			<div class="square">7</div>
-			<div class="square">8</div>
-			<div class="square">9</div>
-			<div class="square">*</div>
-			<div class="square">4</div>
-			<div class="square">5</div>
-			<div class="square">6</div>
-			<div class="square">-</div>
-			<div class="square">1</div>
-			<div class="square">2</div>
-			<div class="square">3</div>
-			<div class="square">+</div>
-			<div class="square">±</div>
-			<div class="square">0</div>
-			<div class="square">.</div>
-			<div class="square">=</div>
+			<!-- <div class="square">
+				<i class="fa fa-undo" aria-hidden="true"></i>
+			</div> -->
+			<div class="square" id="backspace">&larr;</div>
+			<div class="square" id="division">/</div>
+			<div class="square" id="numpad7">7</div>
+			<div class="square" id="numpad8">8</div>
+			<div class="square" id="numpad9">9</div>
+			<div class="square" id="multiplication">*</div>
+			<div class="square" id="numpad4">4</div>
+			<div class="square" id="numpad5">5</div>
+			<div class="square" id="numpad6">6</div>
+			<div class="square" id="subtraction">-</div>
+			<div class="square" id="numpad1">1</div>
+			<div class="square" id="numpad2">2</div>
+			<div class="square" id="numpad3">3</div>
+			<div class="square" id="addition">+</div>
+			<div class="square" id="negation">&plusmn;</div>
+			<div class="square" id="numpad0">0</div>
+			<div class="square" id="decimal">.</div>
+			<div class="square" id="equals">=</div>
 		</div>
 
 

@@ -66,6 +66,7 @@ a {
 	float: left;
 	// display: inline-block;
 	text-align: center;
+	box-shadow: 2px 2px $bg-700;
 	&:hover {
 		cursor: pointer;
 		// background: $bg-300;
