@@ -1,7 +1,8 @@
 body {
   background: #263238;
-  color: white;
-  font-size: 3em;
+  color: #eceff1;
+  font-family: sans-serif;
+  font-size: 2.5em;
   margin: 0;
   padding: 0;
   -webkit-touch-callout: none;
@@ -23,7 +24,7 @@ a {
 
 #history {
   text-align: right;
-  font-size: .5rem;
+  font-size: 1.5rem;
   background: #3b4d56;
   padding: 1%;
   margin: 2% 1% 0 1%;

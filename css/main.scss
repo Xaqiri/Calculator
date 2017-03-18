@@ -17,9 +17,9 @@ $bg-900: 	#263238;
 
 body {
 	background: $bg-900;
-	// color: $bg-50;
-	color: white;
-	font-size: 3em;
+	color: $bg-50;
+	font-family: sans-serif;
+	font-size: 2.5em;
 	margin: 0;
 	padding: 0;
 	@include user-select();
@@ -41,7 +41,7 @@ a {
 
 #history {
 	text-align: right;
-	font-size: .5rem;
+	font-size: 1.5rem;
 	background: lighten($bg-900, 10%);
 	padding: 1%;
 	margin: 2% 1% 0 1%;
@@ -60,7 +60,6 @@ a {
 	margin: 0 auto 10% auto;
 	max-width: 600px;
 	padding: 0;
-	// border: 1px solid white;
 }
 
 .square {
@@ -70,9 +69,7 @@ a {
 	margin: 1%;
 	padding-top: 6%;
 	padding-bottom: 6%;
-	// height: 40px;
 	float: left;
-	// display: inline-block;
 	text-align: center;
 	box-shadow: 2px 2px $bg-700;
 	&:hover {
