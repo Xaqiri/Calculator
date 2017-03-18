@@ -12,13 +12,13 @@ let equals = document.querySelector('#equals')
 
 let sum = []
 let entry = []
-let keypad = []
-let operators = {
+const operators = {
 	addition: '+',
 	subtraction: '-',
 	multiplication: '*',
 	division: '/'
 }
+const operatorKeys = Object.keys(operators)
 
 const operation = (operator) => {
 	if (entry.length > 0) {
@@ -29,9 +29,18 @@ const operation = (operator) => {
 	}
 }
 
+// Add event listeners to operators (+, -, *, /)
+for (let i = 0; i < operatorKeys.length; i++) {
+	let id = '#'+operatorKeys[i]
+	document.querySelector(id).addEventListener('click', function () {
+		operation(operators[operatorKeys[i]])
+	})
+}
+
+// Add event listeners to digits (0..9)
 for (let i = 0; i < 10; i++) {
-	keypad.push(document.querySelector('#numpad'+i))
-	keypad[i].addEventListener('click', function () {
+	let key = document.querySelector('#numpad'+i)
+	key.addEventListener('click', function () {
 		if (!(i === 0 && entry.length === 0)) {
 			entry.push(this.textContent)
 			display.textContent = entry.join('')
@@ -58,30 +67,21 @@ backspace.addEventListener('click', function () {
 
 negation.addEventListener('click', function () {
 	if (entry.length != 0) {
-		entry.unshift('-')
+		if (entry.indexOf('-') === -1) {
+			entry.unshift('-')
+		} else {
+			let index = entry.indexOf('-')
+			entry.splice(index, 1)
+		}
 		display.textContent = entry.join('')
 	}
 })
 
 decimal.addEventListener('click', function () {
-	entry.push('.')
-	display.textContent = entry.join('')
-})
-
-addition.addEventListener('click', function () {
-	operation(operators.addition)
-})
-
-subtraction.addEventListener('click', function () {
-	operation(operators.subtraction)
-})
-
-division.addEventListener('click', function () {
-	operation(operators.division)
-})
-
-multiplication.addEventListener('click', function () {
-	operation(operators.multiplication)
+	if (entry.indexOf('.') === -1) {
+		entry.push('.')
+		display.textContent = entry.join('')
+	}
 })
 
 equals.addEventListener('click', function () {
@@ -90,6 +90,6 @@ equals.addEventListener('click', function () {
 		var total = eval(sum.join(''))
 		display.textContent = total
 		sum = []
-		entry = [total]
+		entry = String(total).split('')
 	}
 })
