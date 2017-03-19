@@ -26,7 +26,7 @@ body {
 }
 
 footer {
-	margin-top: -5%;
+	// margin-top: 15%;
 	text-align: center;
 	font-size: 1rem;
 }
@@ -44,7 +44,7 @@ a {
 	font-size: 1.5rem;
 	background: lighten($bg-900, 10%);
 	padding: 1%;
-	margin: 2% 1% 0 1%;
+	margin: 5% 0 0 0;
 	cursor: default;
 }
 
@@ -52,7 +52,7 @@ a {
 	text-align: right;
 	background: lighten($bg-900, 15%);
 	padding: 1%;
-	margin: 0 1% 1% 1%;
+	margin: 0 0 0 0;
 	cursor: default;
 }
 
@@ -63,17 +63,21 @@ a {
 }
 
 .square {
-	border-radius: 5%;
+	// border-radius: 5%;
 	background: $bg-500;
-	width: 23%;
-	margin: 1%;
-	padding-top: 6%;
-	padding-bottom: 6%;
+	width: 25%;
+	margin: 0;
+	padding-top: 5%;
+	padding-bottom: 5%;
 	float: left;
 	text-align: center;
-	box-shadow: 2px 2px $bg-700;
+	// box-shadow: 0 0 $bg-700;
 	&:hover {
 		cursor: pointer;
-		background: lighten($bg-500, 15%);
+		background: lighten($bg-500, 10%);
+	}
+	&:active {
+		// background: lighten($bg-500, 25%);
+		background: $bg-700;
 	}
 }

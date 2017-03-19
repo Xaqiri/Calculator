@@ -12,7 +12,6 @@ body {
   user-select: none; }
 
 footer {
-  margin-top: -5%;
   text-align: center;
   font-size: 1rem; }
 
@@ -27,14 +26,14 @@ a {
   font-size: 1.5rem;
   background: #3b4d56;
   padding: 1%;
-  margin: 2% 1% 0 1%;
+  margin: 5% 0 0 0;
   cursor: default; }
 
 #display {
   text-align: right;
   background: #455b66;
   padding: 1%;
-  margin: 0 1% 1% 1%;
+  margin: 0 0 0 0;
   cursor: default; }
 
 .container {
@@ -43,17 +42,17 @@ a {
   padding: 0; }
 
 .square {
-  border-radius: 5%;
   background: #607d8b;
-  width: 23%;
-  margin: 1%;
-  padding-top: 6%;
-  padding-bottom: 6%;
+  width: 25%;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
   float: left;
-  text-align: center;
-  box-shadow: 2px 2px #455a64; }
+  text-align: center; }
   .square:hover {
     cursor: pointer;
-    background: #8aa2ae; }
+    background: #7b96a3; }
+  .square:active {
+    background: #455a64; }
 
 /*# sourceMappingURL=main.css.map */
