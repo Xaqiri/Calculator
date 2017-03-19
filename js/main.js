@@ -23,7 +23,9 @@ const operatorKeys = Object.keys(operators)
 
 const operation = (operator) => {
 	if (entry.length > 0) {
-		if (entry[entry.length-1] === '.') entry.push('0')
+		if (entry[entry.length-1] === '.' || entry[entry.length-1] === '-') {
+			entry.push('0')
+		}
 		sum.push(entry.join(''))
 		sum.push(operator)
 		display.textContent = entry.join('')
@@ -65,7 +67,9 @@ clearEntry.addEventListener('click', function () {
 
 backspace.addEventListener('click', function () {
 	entry.pop()
-	if (entry.length > 0) display.textContent = entry.join('')
+	if (entry.length > 0) {
+		display.textContent = entry.join('')
+	}
 	else display.textContent = 0
 })
 
@@ -90,6 +94,9 @@ decimal.addEventListener('click', function () {
 
 equals.addEventListener('click', function () {
 	if (entry.length > 0) {
+		if (entry[entry.length-1] === '.' || entry[entry.length-1] === '-') {
+			entry[entry.length-1] = '.0'
+		}
 		sum.push(entry.join(''))
 		var total = eval(sum.join(''))
 		display.textContent = total
