@@ -42,7 +42,7 @@ a {
   padding: 0; }
 
 .square {
-  font-size: 3rem;
+  line-height: 1em;
   background: #607d8b;
   width: 23%;
   margin: 1%;
