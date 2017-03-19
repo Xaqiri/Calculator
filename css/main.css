@@ -1,7 +1,7 @@
 body {
   background: #263238;
   color: #eceff1;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5em;
   margin: 0;
   padding: 0;
@@ -26,14 +26,14 @@ a {
   font-size: 1.5rem;
   background: #3b4d56;
   padding: 1%;
-  margin: 5% 0 0 0;
+  margin: 5% 1% 0 1%;
   cursor: default; }
 
 #display {
   text-align: right;
   background: #455b66;
   padding: 1%;
-  margin: 0 0 0 0;
+  margin: 0 1% 0 1%;
   cursor: default; }
 
 .container {
@@ -42,13 +42,15 @@ a {
   padding: 0; }
 
 .square {
+  font-size: 3rem;
   background: #607d8b;
-  width: 25%;
-  margin: 0;
+  width: 23%;
+  margin: 1%;
   padding-top: 5%;
   padding-bottom: 5%;
   float: left;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 4px 4px #455a64; }
   .square:hover {
     cursor: pointer;
     background: #7b96a3; }
