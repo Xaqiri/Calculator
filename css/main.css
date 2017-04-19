@@ -11,7 +11,8 @@ body {
   -ms-user-select: none;
   user-select: none; }
 
-footer {
+footer .container {
+  background-color: #263238;
   text-align: center;
   font-size: 1rem; }
 
@@ -25,36 +26,38 @@ a {
   text-align: right;
   font-size: 1.5rem;
   background: #3b4d56;
-  padding: 1%;
-  margin: 5% 1% 0 1%;
+  margin: 0 1%;
   cursor: default; }
 
 #display {
   text-align: right;
   background: #455b66;
+  margin: 0.5%;
   padding: 1%;
-  margin: 0 1% 0 1%;
   cursor: default; }
 
 .container {
-  margin: 0 auto 10% auto;
+  margin: 5% auto;
   max-width: 600px;
-  padding: 0; }
+  padding: 10px;
+  background: #3b4d56; }
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background: #3b4d56; }
 
 .square {
-  line-height: 1em;
+  flex-basis: 24%;
+  line-height: 3em;
   background: #607d8b;
-  width: 23%;
-  margin: 1%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  float: left;
-  text-align: center;
-  box-shadow: 4px 4px #455a64; }
+  margin: 0 0 5px 0;
+  text-align: center; }
   .square:hover {
     cursor: pointer;
     background: #7b96a3; }
   .square:active {
-    background: #455a64; }
+    background: #3b4d56; }
 
 /*# sourceMappingURL=main.css.map */
