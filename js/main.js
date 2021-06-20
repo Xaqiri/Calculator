@@ -92,13 +92,31 @@ decimal.addEventListener('click', function () {
 	}
 })
 
+const add = (a, b) => {
+	return parseInt(a) + parseInt(b)
+}
+const subtract = (a, b) => {
+	return parseInt(a) - parseInt(b)
+} 
+const multiply = (a, b) => {
+	return parseInt(a) * parseInt(b) 
+} 
+const divide = (a, b) => {
+	return parseInt(a) / parseInt(b)
+} 
+
 equals.addEventListener('click', function () {
 	if (entry.length > 0) {
 		if (entry[entry.length-1] === '.' || entry[entry.length-1] === '-') {
 			entry[entry.length-1] = '.0'
 		}
+		let total = 0
 		sum.push(entry.join(''))
-		var total = eval(sum.join(''))
+		if (sum[1] == '+') total = add(sum[0], sum[2])
+		if (sum[1] == '-') total = subtract(sum[0], sum[2])
+		if (sum[1] == '*') total = multiply(sum[0], sum[2]) 
+		if (sum[1] == '/') total = divide(sum[0], sum[2]) 
+
 		display.textContent = total
 		sum.push('=', total)
 		history.textContent = sum.join('')
