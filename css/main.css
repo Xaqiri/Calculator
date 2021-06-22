@@ -60,4 +60,10 @@ a {
   .square:active {
     background: #3b4d56; }
 
+.operator { 
+  background: #186780
+}
+.operator:hover { 
+    background: #18688042;
+  }
 /*# sourceMappingURL=main.css.map */
